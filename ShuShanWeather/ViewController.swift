@@ -21,10 +21,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.requestAlwaysAuthorization()
-        locationManager.delegate = self
+        print("debug")
+        locationManager.requestWhenInUseAuthorization()//请求授权获取当前位置
+        locationManager.delegate = self//委托代理
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers//经度 千米
+        locationManager.requestLocation()
     }
-
+    
+    //当点击查询返回时,将上个页面的city名字带回上个页面
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? QueryViewController{
+            vc.currentCity = weather.city
+            vc.delegat = self
+        }
+    }
+    
 
 }
 

@@ -1,0 +1,6 @@
+framework module Pods_ShuShanWeather {
+  umbrella header "Pods-ShuShanWeather-umbrella.h"
+
+  export *
+  module * { export * }
+}

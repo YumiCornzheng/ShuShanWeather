@@ -23,22 +23,25 @@
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="rjL-rV-HLd" kind="presentation" identifier="QueryViewControllerSegue" modalPresentationStyle="fullScreen" id="a2p-IQ-XZH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2m-sb-6CR">
-                                <rect key="frame" x="242" y="162" width="148" height="120"/>
+                                <rect key="frame" x="242.5" y="162" width="147.5" height="119.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="XLq-Kw-ow5">
-                                <rect key="frame" x="79" y="362" width="256" height="256"/>
+                                <rect key="frame" x="79" y="361.5" width="256" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="O1F-kD-gEf"/>
                                     <constraint firstAttribute="height" constant="256" id="dAp-7S-wWk"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在获取位置..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTg-5G-dfC">
-                                <rect key="frame" x="24" y="798.5" width="222.5" height="39.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未获取到位置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTg-5G-dfC">
+                                <rect key="frame" x="24" y="798.5" width="200" height="39.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,12 +68,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2463768115942031" y="30.803571428571427"/>
+            <point key="canvasLocation" x="-12" y="35"/>
         </scene>
-        <!--View Controller-->
+        <!--Query View Controller-->
         <scene sceneID="s3f-VS-x6j">
             <objects>
-                <viewController id="rjL-rV-HLd" sceneMemberID="viewController">
+                <viewController id="rjL-rV-HLd" customClass="QueryViewController" customModule="ShuShanWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NFb-1V-mOR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +85,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="back:" destination="rjL-rV-HLd" eventType="touchUpInside" id="peC-jj-VVS"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="v4o-y4-ICT">
                                 <rect key="frame" x="65" y="124" width="284" height="36"/>
@@ -112,17 +118,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查询天气" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fi-Nv-Vzi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-wh-RPO">
                                         <rect key="frame" x="0.0" y="102" width="248" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ebd-i1-nQI"/>
-                                            <constraint firstAttribute="width" constant="248" id="oxA-sp-au4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="查询天气">
+                                            <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="query:" destination="rjL-rV-HLd" eventType="touchUpInside" id="ivM-wO-3jX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vfh-wh-RPO" secondAttribute="bottom" id="VTa-Uo-SSx"/>
+                                    <constraint firstAttribute="trailing" secondItem="vfh-wh-RPO" secondAttribute="trailing" id="rs5-7K-bi0"/>
+                                    <constraint firstItem="vfh-wh-RPO" firstAttribute="leading" secondItem="xJZ-NZ-moG" secondAttribute="leading" id="xDR-Hd-THu"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lVd-Ad-M9W"/>
@@ -136,6 +148,10 @@
                             <constraint firstItem="v4o-y4-ICT" firstAttribute="top" secondItem="lVd-Ad-M9W" secondAttribute="top" constant="80" id="t6z-6O-kRA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTextfield" destination="yVg-V7-9Se" id="U4g-oV-LA9"/>
+                        <outlet property="currentCityLabel" destination="37r-Kh-5PR" id="Mif-gx-E9S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hR2-E4-1HY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

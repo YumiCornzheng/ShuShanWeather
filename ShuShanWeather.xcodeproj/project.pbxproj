@@ -17,9 +17,15 @@
 		B16A35CB282E03A80044A27E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A35CA282E03A80044A27E /* Weather.swift */; };
 		B16A35CF282E08F30044A27E /* ViewController-CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A35CE282E08F30044A27E /* ViewController-CLLocationManagerDelegate.swift */; };
 		B16A35D1282E0AA40044A27E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A35D0282E0AA40044A27E /* Constant.swift */; };
+		B16A35D3282E314B0044A27E /* ViewController-helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A35D2282E314B0044A27E /* ViewController-helper.swift */; };
+		B16A35D5282E39BC0044A27E /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A35D4282E39BC0044A27E /* QueryViewController.swift */; };
+		B16A35D7282E41F60044A27E /* ViewController-QueryViewControllerAelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A35D6282E41F60044A27E /* ViewController-QueryViewControllerAelegate.swift */; };
+		D98CD383C110B96AD7228B93 /* Pods_ShuShanWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6AC7D8A43BB6C6A112D26F9 /* Pods_ShuShanWeather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12D83FB5EE36739D1254AA7C /* Pods-ShuShanWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShuShanWeather.release.xcconfig"; path = "Target Support Files/Pods-ShuShanWeather/Pods-ShuShanWeather.release.xcconfig"; sourceTree = "<group>"; };
+		A6AC7D8A43BB6C6A112D26F9 /* Pods_ShuShanWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShuShanWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1154E48281BE57600F5A437 /* ShuShanWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShuShanWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1154E4B281BE57600F5A437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1154E4D281BE57600F5A437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,10 @@
 		B16A35CA282E03A80044A27E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		B16A35CE282E08F30044A27E /* ViewController-CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController-CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		B16A35D0282E0AA40044A27E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B16A35D2282E314B0044A27E /* ViewController-helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController-helper.swift"; sourceTree = "<group>"; };
+		B16A35D4282E39BC0044A27E /* QueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
+		B16A35D6282E41F60044A27E /* ViewController-QueryViewControllerAelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController-QueryViewControllerAelegate.swift"; sourceTree = "<group>"; };
+		C573152815570E04ED2BD4C0 /* Pods-ShuShanWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShuShanWeather.debug.xcconfig"; path = "Target Support Files/Pods-ShuShanWeather/Pods-ShuShanWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98CD383C110B96AD7228B93 /* Pods_ShuShanWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB103A3B48A7D7AD233728E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C573152815570E04ED2BD4C0 /* Pods-ShuShanWeather.debug.xcconfig */,
+				12D83FB5EE36739D1254AA7C /* Pods-ShuShanWeather.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC6F0DE41A0B2B592DA8529C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6AC7D8A43BB6C6A112D26F9 /* Pods_ShuShanWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B1154E3F281BE57600F5A437 = {
 			isa = PBXGroup;
 			children = (
 				B1154E4A281BE57600F5A437 /* ShuShanWeather */,
 				B1154E49281BE57600F5A437 /* Products */,
+				AB103A3B48A7D7AD233728E3 /* Pods */,
+				AC6F0DE41A0B2B592DA8529C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +121,9 @@
 			children = (
 				B1154E4F281BE57600F5A437 /* ViewController.swift */,
 				B16A35CE282E08F30044A27E /* ViewController-CLLocationManagerDelegate.swift */,
+				B16A35D2282E314B0044A27E /* ViewController-helper.swift */,
+				B16A35D4282E39BC0044A27E /* QueryViewController.swift */,
+				B16A35D6282E41F60044A27E /* ViewController-QueryViewControllerAelegate.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -102,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1154E5F281BE57A00F5A437 /* Build configuration list for PBXNativeTarget "ShuShanWeather" */;
 			buildPhases = (
+				E2492CF3DBE15491908D2D19 /* [CP] Check Pods Manifest.lock */,
 				B1154E44281BE57600F5A437 /* Sources */,
 				B1154E45281BE57600F5A437 /* Frameworks */,
 				B1154E46281BE57600F5A437 /* Resources */,
+				6F377D011B19E5FCA1CC9CCC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +196,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F377D011B19E5FCA1CC9CCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShuShanWeather/Pods-ShuShanWeather-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShuShanWeather/Pods-ShuShanWeather-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShuShanWeather/Pods-ShuShanWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2492CF3DBE15491908D2D19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShuShanWeather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1154E44281BE57600F5A437 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -168,6 +245,9 @@
 			files = (
 				B16A35D1282E0AA40044A27E /* Constant.swift in Sources */,
 				B1154E50281BE57600F5A437 /* ViewController.swift in Sources */,
+				B16A35D3282E314B0044A27E /* ViewController-helper.swift in Sources */,
+				B16A35D5282E39BC0044A27E /* QueryViewController.swift in Sources */,
+				B16A35D7282E41F60044A27E /* ViewController-QueryViewControllerAelegate.swift in Sources */,
 				B1154E56281BE57600F5A437 /* ShuShanWeather.xcdatamodeld in Sources */,
 				B1154E4C281BE57600F5A437 /* AppDelegate.swift in Sources */,
 				B1154E4E281BE57600F5A437 /* SceneDelegate.swift in Sources */,
@@ -314,6 +394,7 @@
 		};
 		B1154E60281BE57A00F5A437 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C573152815570E04ED2BD4C0 /* Pods-ShuShanWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +423,7 @@
 		};
 		B1154E61281BE57A00F5A437 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D83FB5EE36739D1254AA7C /* Pods-ShuShanWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
